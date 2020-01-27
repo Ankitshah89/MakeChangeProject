@@ -6,16 +6,31 @@ import java.text.DecimalFormat;
 public class MakeChange {
 
 	public static void main(String[] args) {
+		// String choice ="";
 
 		Scanner kb = new Scanner(System.in);
-		System.out.println("*************** \tCASH REGISTER\t ****************");
-		System.out.print("Enter the price of the item: ");
-		double itemPrice = kb.nextDouble();
-		System.out.print("Enter the amount tendered: ");
-		double tenderedAmount = kb.nextDouble();
-		System.out.println(totalChange(itemPrice, tenderedAmount));
 
-		DecimalFormat df = new DecimalFormat("0.00");
+		while (true) {
+
+			System.out.println("*************** \tCASH REGISTER\t ****************");
+
+			System.out.print("Enter the price of the item: ");
+			double itemPrice = kb.nextDouble();
+			System.out.print("Enter the amount tendered: ");
+			double tenderedAmount = kb.nextDouble();
+			System.out.println(totalChange(itemPrice, tenderedAmount));
+			System.out.print("Another transactions? (Y/N)");
+			String choice = kb.next();
+
+			if (choice.equalsIgnoreCase("N")) {
+				System.out.print("Thank you for shopping with us!");
+
+				break;
+			} 
+
+			DecimalFormat df = new DecimalFormat("0.00");
+
+		}
 
 		kb.close();
 	}
