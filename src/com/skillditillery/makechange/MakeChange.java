@@ -6,7 +6,6 @@ import java.text.DecimalFormat;
 public class MakeChange {
 
 	public static void main(String[] args) {
-		// String choice ="";
 
 		Scanner kb = new Scanner(System.in);
 
@@ -26,7 +25,7 @@ public class MakeChange {
 				System.out.print("Thank you for shopping with us!");
 
 				break;
-			} 
+			}
 
 			DecimalFormat df = new DecimalFormat("0.00");
 
